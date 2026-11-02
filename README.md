@@ -1,38 +1,90 @@
 # Retro Sci-Fi Portfolio
 
-Original Halo: Combat Evolved-era inspired visual styling, without Halo names, logos, or copied artwork. A lightweight, responsive portfolio built with HTML, CSS, and JavaScript. The included ringworld illustration is an original SVG placeholder, not extracted game media.
+My personal software engineering portfolio, built with HTML, CSS, and vanilla JavaScript and inspired by the visual style of early-2000s sci-fi video games, particularly Halo: Combat Evolved.
 
-## Getting started
+The website features a retro sci-fi menu interface with an animated background, allowing visitors to navigate between sections without reloading the page.
 
-Open `index.html` in a browser. No build tools or dependencies are required.
+## Features
 
-## Using your own background video
+- **Menu-Based Navigation:** Switch between Home, Projects, Experience, Skills, About, and Contact.
+- **Animated Background:** Fullscreen looping video behind the interface.
+- **GitHub Integration:** Automatically retrieves public repositories using the GitHub API.
+- **Project Filtering:** Filter repositories by their primary programming language.
+- **Customizable Projects:** Hide unwanted repositories and prioritize featured projects through a configuration file.
+- **Responsive Design:** Supports desktop and mobile devices.
+- **No Frameworks:** Built using HTML, CSS, and JavaScript.
 
-Place an **MP4 (H.264)** at:
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/SebastianKlemkosky/sebastianklemkosky.github.io.git
+```
+
+Open `index.html` in your browser.
+
+No build tools or additional dependencies are required.
+
+## Project Structure
+
+```text
+├── index.html
+├── styles.css
+├── js/
+│   ├── script.js
+│   ├── github-config.js
+│   └── github.js
+└── assets/
+    ├── backgrounds/
+    │   └── ring-background.mp4
+    ├── images/
+    │   └── profile.png
+    └── resume.pdf
+```
+
+## GitHub Repository Integration
+
+The Projects section automatically retrieves public repositories from GitHub.
+
+Repository visibility and display order are managed through `js/github-config.js`.
+
+Configuration options include:
+
+- GitHub username
+- Hidden repositories
+- Featured repositories
+- Excluding forks
+- Excluding archived repositories
+
+Repositories are displayed as project cards with their names, descriptions, primary programming languages, and GitHub links.
+
+## Background Video
+
+The website supports a fullscreen MP4 background video located at:
 
 `assets/backgrounds/ring-background.mp4`
 
-The website will automatically play it behind the interface. If the file is missing or cannot play, the included `ringworld.svg` illustration is displayed instead. Your MP4 should be muted, reasonably compressed, and seamless if possible. If you want to use a WebM instead, edit the `<source>` in `index.html`.
+The background is separate from the portfolio content, allowing it to be replaced without changing the site's navigation or layout.
 
-**Rights:** Do not upload Halo game footage or third-party mod assets to your public portfolio unless you have the rights or permission to redistribute them. You can use the original SVG placeholder for deployment.
+Game footage and other third-party media remain subject to their respective copyright and usage terms.
 
-## Important edits before publishing
+## Hosting
 
-- Replace the GitHub repository browse links with individual project repo URLs.
-- Add a resume PDF and link to it from navigation or Contact.
-- Add LinkedIn and contact details if desired.
-- Update any professional project descriptions for accuracy and confidentiality.
-- The Azeroth Bots project is marked as in development, not a completed product.
+The website is hosted using GitHub Pages.
 
-## Deploy to GitHub Pages
+**Website:** [sebastianklemkosky.github.io](https://sebastianklemkosky.github.io)
 
-Copy all files and folders into the root of the `sebastianklemkosky.github.io` repository. Commit and push to its publishing branch (usually `main`). Check **Settings > Pages** for source selection.
+## Technologies
 
-## Files
+- HTML5
+- CSS3
+- JavaScript
+- GitHub REST API
+- GitHub Pages
 
-- `index.html` — site content
-- `styles.css` — retro sci-fi styles and responsive layout
-- `script.js` — mobile navigation, active menu states, optional video
-- `assets/backgrounds/ringworld.svg` — original fallback artwork
+## About
 
-Respects reduced-motion settings. All important content remains available without JavaScript.
+This portfolio is an ongoing personal project designed to showcase my software engineering experience, technical skills, and programming projects.
+
+The website will continue to evolve as I complete additional projects and improve its design and functionality.
