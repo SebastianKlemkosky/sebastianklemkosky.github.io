@@ -5,11 +5,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Sebastian Klemkosky | Portfolio</title>
 
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+
+    <!-- JavaScript -->
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/github-config.js" defer></script>
+    <script src="scripts/github.js" defer></script>
+
 </head>
 
 <body>
@@ -73,54 +79,95 @@
             <!-- CONTENT WINDOW -->
             <div class="content-window">
 
+               
                 <!-- HOME -->
                 <section id="home" class="page">
-                    <h2>Welcome</h2>
 
-                    <p>
-                        Software engineer focused on backend
-                        development, automation, and building
-                        reliable software systems.
-                    </p>
 
-                    <a href="#projects" class="action-link">
-                        View Projects
-                    </a>
+                    <div class="home-profile">
+
+                        <!-- PROFILE PICTURE -->
+                        <img
+                            src="assets/images/profile.jpg"
+                            alt="Sebastian Klemkosky"
+                            class="profile-photo"
+                        >
+
+                        <!-- INTRODUCTION -->
+                        <div class="home-intro">
+
+                            <h3>Sebastian Klemkosky</h3>
+
+                            <p class="job-title">
+                                Software Engineer
+                            </p>
+
+                            <p>
+                                I hold a Bachelor's and Master's degree in
+                                Computer Science from the University of Texas
+                                at San Antonio.
+                            </p>
+
+                            <p>
+                                I have professional experience developing
+                                automation tools, backend systems, and
+                                data integrations using technologies
+                                such as Python, C#, and SQL.
+                            </p>
+
+                            <p>
+                                I enjoy building practical software,
+                                learning new technologies, and working
+                                on game-related programming projects.
+                            </p>
+
+                            <!-- LINKS -->
+                            <div class="home-links">
+
+                                <a href="#projects" class="action-link">
+                                    View Projects
+                                </a>
+
+                                <a
+                                    href="assets/resume.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="action-link"
+                                >
+                                    View Resume
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </section>
 
+
+               
                 <!-- PROJECTS -->
                 <section id="projects" class="page" hidden>
+
                     <h2>Projects</h2>
 
-                    <article class="project">
-                        <h3>Asteroids</h3>
+                    <!-- LANGUAGE FILTER -->
+                    <label for="project-filter">
+                        Filter by Language:
+                    </label>
 
-                        <p>
-                            A classic arcade game built using
-                            Python and Pygame.
-                        </p>
-                    </article>
+                    <select id="project-filter">
+                        <option value="all">All Languages</option>
+                    </select>
 
-                    <article class="project">
-                        <h3>AI Coding Agent</h3>
+                    <!-- PROJECT LIST -->
+                    <div id="project-list" class="project-grid">
+                        <p>Loading repositories...</p>
+                    </div>
 
-                        <p>
-                            A Python coding agent that can
-                            inspect, create, and run files.
-                        </p>
-                    </article>
-
-                    <article class="project">
-                        <h3>Azeroth Bots</h3>
-
-                        <p>
-                            An experimental bot automation
-                            and telemetry project.
-                        </p>
-
-                        <small>In development</small>
-                    </article>
                 </section>
+
 
                 <!-- EXPERIENCE -->
                 <section id="experience" class="page" hidden>
