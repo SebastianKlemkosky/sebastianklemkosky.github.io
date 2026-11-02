@@ -1,118 +1,48 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101827">
-  <meta name="description" content="Sebastian Klemkosky — software engineering, automation, backend systems, and interactive projects.">
-  <title>Sebastian Klemkosky | Software Engineer</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sebastian Klemkosky | Portfolio</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-  <a href="#main" class="skip-link">Skip to content</a>
-  <header class="site-header">
-    <a class="logo" href="#top" aria-label="Back to top">SK<span class="logo-dot">.</span></a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
-    </nav>
-    <a class="nav-github" href="https://github.com/SebastianKlemkosky" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-  </header>
+    <main>
 
-  <main id="main">
-    <!-- LEVEL 1: HERO. Intentionally kept as a placeholder for the future runner. -->
-    <section class="biome surface" id="top" aria-labelledby="surface-heading">
-      <div class="sky-cloud cloud-one" aria-hidden="true"></div>
-      <div class="sky-cloud cloud-two" aria-hidden="true"></div>
-      <div class="surface-hills" aria-hidden="true"></div>
-      <div class="content hero-content">
-        <div class="level-tag">LEVEL 01 <span>·</span> SURFACE</div>
-        <h1 id="surface-heading">The adventure<br><em>starts here.</em></h1>
-        <p>This space is reserved for an interactive pixel-art endless runner. The game will arrive after the rest of the portfolio is complete.</p>
-        <div class="hero-actions">
-          <a class="pixel-button" href="#about">Explore the world <span aria-hidden="true">↓</span></a>
-          <span class="coming-soon"><span class="small-led"></span> Runner in development</span>
-        </div>
-      </div>
-      <div class="surface-ground" aria-hidden="true"><span class="grass"></span><span class="dirt"></span></div>
-      <div class="scroll-label" aria-hidden="true">SCROLL TO DESCEND ↓</div>
-    </section>
+        <!-- SURFACE BIOME -->
+        <section class="surface" aria-label="Surface biome">
 
-    <!-- LEVEL 2: SEWERS / ABOUT -->
-    <section class="biome sewer" id="about" aria-labelledby="about-heading">
-      <div class="pipes" aria-hidden="true"><span class="pipe pipe-a"></span><span class="pipe pipe-b"></span><span class="pipe pipe-c"></span></div>
-      <div class="sewer-bricks" aria-hidden="true"></div>
-      <div class="content section-content">
-        <div class="level-tag">LEVEL 02 <span>·</span> UNDERCITY</div>
-        <div class="split-layout">
-          <div>
-            <p class="eyebrow">01 / ABOUT ME</p>
-            <h2 id="about-heading">Curiosity goes<br><em>below the surface.</em></h2>
-            <p class="lead">I'm Sebastian, a software engineer with a computer science background and experience building practical automation and software systems.</p>
-            <p>I enjoy backend development, data pipelines, problem solving, and making small games. This site is both my portfolio and a project I can keep improving.</p>
-          </div>
-          <div class="pixel-panel character-panel">
-            <div class="panel-top"><span class="panel-lights">■ ■ ■</span><span>PLAYER PROFILE</span></div>
-            <div class="avatar-scene" aria-hidden="true">
-              <div class="avatar-pixel"><span class="head"></span><span class="eye"></span><span class="torso"></span><span class="arm"></span><span class="leg left"></span><span class="leg right"></span></div>
-              <span class="avatar-platform"></span>
-            </div>
-            <div class="profile-details"><strong>SEBASTIAN</strong><span>CLASS: SOFTWARE ENGINEER</span><span>SPECIALTIES: AUTOMATION / BACKEND</span><span>QUEST: BUILD &amp; LEARN</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="waterline" aria-hidden="true"></div>
-    </section>
+            <div class="sky"></div>
 
-    <!-- LEVEL 3: EARTH / PROJECTS -->
-    <section class="biome underground" id="projects" aria-labelledby="projects-heading">
-      <div class="ore ore-one" aria-hidden="true">✦</div><div class="ore ore-two" aria-hidden="true">✦</div><div class="ore ore-three" aria-hidden="true">✦</div>
-      <div class="content section-content">
-        <div class="level-tag">LEVEL 03 <span>·</span> THE DEEP</div>
-        <p class="eyebrow">02 / FEATURED WORK</p>
-        <h2 id="projects-heading">Dig into the <em>projects.</em></h2>
-        <p class="section-intro">A few things I've built, and a few still taking shape. Completed work and upcoming experiments are labeled separately.</p>
-        <div class="project-grid">
-          <article class="pixel-panel project-card">
-            <div class="project-art asteroid-art" aria-hidden="true"><span class="pixel-ship">▲</span><span class="asteroid ast-one">◆</span><span class="asteroid ast-two">◆</span><span class="star star-one">✦</span><span class="star star-two">·</span></div>
-            <div class="card-body"><div class="card-heading"><h3>Asteroids</h3><span class="status complete">Completed</span></div><p>A classic arcade game built with Python and Pygame. A browser-playable version is planned.</p><div class="chips"><span>Python</span><span>Pygame</span></div><a class="text-link" href="https://github.com/SebastianKlemkosky?tab=repositories" target="_blank" rel="noopener noreferrer">Browse repositories ↗</a></div>
-          </article>
-          <article class="pixel-panel project-card">
-            <div class="project-art dungeon-art" aria-hidden="true"><span class="dungeon-door"></span><span class="dungeon-flame flame-left"></span><span class="dungeon-flame flame-right"></span></div>
-            <div class="card-body"><div class="card-heading"><h3>Dungeon Explorer</h3><span class="status planned">Planned</span></div><p>A turn-based browser dungeon crawler with procedural rooms, tile movement, and enemy encounters.</p><div class="chips"><span>JavaScript</span><span>HTML Canvas</span></div><span class="text-muted">Playable demo coming later</span></div>
-          </article>
-          <article class="pixel-panel project-card">
-            <div class="project-art bot-art" aria-hidden="true"><span class="bot-head"><span class="bot-eye left"></span><span class="bot-eye right"></span></span><span class="bot-body"></span><span class="bot-antenna"></span><span class="bot-signal">⌁</span></div>
-            <div class="card-body"><div class="card-heading"><h3>Azeroth Bots</h3><span class="status progress">In development</span></div><p>An evolving project exploring game-bot telemetry, backend systems, data collection, and analytics.</p><div class="chips"><span>Go</span><span>SQL</span><span>Analytics</span></div><span class="text-muted">Case study coming later</span></div>
-          </article>
-        </div>
-      </div>
-      <div class="rock-transition" aria-hidden="true"></div>
-    </section>
+            <!-- Parallax layers -->
+            <div class="mountains mountains-far"></div>
+            <div class="mountains mountains-near"></div>
 
-    <!-- LEVEL 4: LAVA / SKILLS & CONTACT -->
-    <section class="biome inferno" id="skills" aria-labelledby="skills-heading">
-      <div class="ember ember-one" aria-hidden="true"></div><div class="ember ember-two" aria-hidden="true"></div><div class="ember ember-three" aria-hidden="true"></div>
-      <div class="content section-content">
-        <div class="level-tag">LEVEL 04 <span>·</span> THE CORE</div>
-        <p class="eyebrow">03 / TOOLBOX</p>
-        <h2 id="skills-heading">Forged in <em>code.</em></h2>
-        <p class="section-intro">Languages and technologies I use or am actively developing.</p>
-        <div class="skills-grid">
-          <div class="pixel-panel skill-box"><div class="skill-icon">{ }</div><h3>Languages</h3><p>Python · Go · JavaScript · C# · SQL</p></div>
-          <div class="pixel-panel skill-box"><div class="skill-icon">&lt;/&gt;</div><h3>Development</h3><p>Git · GitHub · Linux · HTML · CSS</p></div>
-          <div class="pixel-panel skill-box"><div class="skill-icon">⚙</div><h3>Interests</h3><p>Backend systems · Automation · Data pipelines · Games</p></div>
-        </div>
-        <div class="contact-section" id="contact">
-          <p class="eyebrow">04 / CONTACT</p>
-          <h2>Made it to the <em>bottom?</em></h2>
-          <p>Thanks for exploring. See what I'm working on or get in touch through GitHub.</p>
-          <div class="contact-actions"><a class="pixel-button" href="https://github.com/SebastianKlemkosky" target="_blank" rel="noopener noreferrer">Visit GitHub ↗</a><a class="pixel-button outline" href="#top">Back to surface ↑</a></div>
-        </div>
-      </div>
-      <div class="lava-river" aria-hidden="true"><div class="lava-wave"></div></div>
-    </section>
-  </main>
-  <footer class="site-footer"><span>© <span id="year">2026</span> Sebastian Klemkosky</span><span>Hand-built with HTML, CSS &amp; JavaScript · GitHub Pages</span></footer>
+            <!-- Ground -->
+            <div class="terrain"></div>
+            <div class="grass-edge"></div>
+
+        </section>
+
+
+        <!-- UNDERGROUND TRANSITION -->
+        <section class="underground" aria-label="Underground biome">
+
+            <div class="dirt-layer"></div>
+            <div class="dirt-stone-layer"></div>
+            <div class="stone-layer"></div>
+
+        </section>
+
+
+
+
+    </main>
 </body>
 </html>

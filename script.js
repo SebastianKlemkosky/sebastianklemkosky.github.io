@@ -1,19 +1,79 @@
-// Portfolio interactions will live here as the project grows.
-// The hero endless runner will be implemented in a later milestone.
-document.getElementById('year').textContent = new Date().getFullYear();
 
-// Highlight the section currently in view without changing its URL.
-const sectionIds = ['about', 'projects', 'skills', 'contact'];
-const links = Array.from(document.querySelectorAll('.nav a'));
-if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver(entries => {
-    const visible = entries.filter(entry => entry.isIntersecting);
-    if (!visible.length) return;
-    const id = visible.sort((a,b) => b.intersectionRatio-a.intersectionRatio)[0].target.id;
-    links.forEach(link => {
-      if (link.getAttribute('href') === `#${id}`) link.setAttribute('aria-current','location');
-      else link.removeAttribute('aria-current');
-    });
-  }, {rootMargin:'-25% 0px -55% 0px', threshold:0});
-  sectionIds.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
+/* ========================================
+   Texas Hill Country Parallax
+======================================== */
+
+const surface = document.querySelector(".surface");
+
+const farHills = document.querySelector(".mountains-far");
+const nearHills = document.querySelector(".mountains-near");
+
+const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+);
+
+// Parallax speed multipliers
+const FAR_SPEED = 0.35;
+const NEAR_SPEED = 0.15;
+
+let ticking = false;
+
+function updateParallax() {
+    if (!surface || !farHills || !nearHills) {
+        ticking = false;
+        return;
+    }
+
+    if (reducedMotion.matches) {
+        farHills.style.transform = "";
+        nearHills.style.transform = "";
+        ticking = false;
+        return;
+    }
+
+    const rect = surface.getBoundingClientRect();
+
+    // Skip updates when the surface is off-screen
+    if (rect.bottom < 0 || rect.top > window.innerHeight) {
+        ticking = false;
+        return;
+    }
+
+    const scrollDistance = Math.max(0, -rect.top);
+
+    // Far hills move more slowly relative to the viewport
+    farHills.style.transform =
+        `translate3d(0, ${scrollDistance * FAR_SPEED}px, 0)`;
+
+    // Near hills move closer to the normal page speed
+    nearHills.style.transform =
+        `translate3d(0, ${scrollDistance * NEAR_SPEED}px, 0)`;
+
+    ticking = false;
 }
+
+function requestParallaxUpdate() {
+    if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+    }
+}
+
+window.addEventListener(
+    "scroll",
+    requestParallaxUpdate,
+    { passive: true }
+);
+
+window.addEventListener(
+    "resize",
+    requestParallaxUpdate
+);
+
+reducedMotion.addEventListener(
+    "change",
+    requestParallaxUpdate
+);
+
+// Set initial position
+requestParallaxUpdate();
