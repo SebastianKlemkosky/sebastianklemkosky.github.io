@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sebastian Klemkosky | Portfolio</title>
 
@@ -13,36 +13,178 @@
 </head>
 
 <body>
-    <main>
 
-        <!-- SURFACE BIOME -->
-        <section class="surface" aria-label="Surface biome">
+    <!-- BACKGROUND VIDEO -->
+    <video
+        class="background-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+    >
+        <source
+            src="assets/backgrounds/ring-background.mp4"
+            type="video/mp4"
+        >
+    </video>
 
-            <div class="sky"></div>
+    <div class="background-overlay"></div>
 
-            <!-- Parallax layers -->
-            <div class="mountains mountains-far"></div>
-            <div class="mountains mountains-near"></div>
+    <!-- PORTFOLIO -->
+    <div class="portfolio">
 
-            <!-- Ground -->
-            <div class="terrain"></div>
-            <div class="grass-edge"></div>
+        <!-- HEADER -->
+        <header class="site-header">
+            <h1>Sebastian Klemkosky</h1>
+            <p>Software Engineering Portfolio</p>
+        </header>
 
-        </section>
+        <!-- MAIN LAYOUT -->
+        <main class="layout">
 
+            <!-- NAVIGATION -->
+            <nav class="menu" aria-label="Portfolio navigation">
 
-        <!-- UNDERGROUND TRANSITION -->
-        <section class="underground" aria-label="Underground biome">
+                <a href="#home" class="menu-link">Home</a>
 
-            <div class="dirt-layer"></div>
-            <div class="dirt-stone-layer"></div>
-            <div class="stone-layer"></div>
+                <a href="#projects" class="menu-link">
+                    Projects
+                </a>
 
-        </section>
+                <a href="#experience" class="menu-link">
+                    Experience
+                </a>
 
+                <a href="#skills" class="menu-link">
+                    Skills
+                </a>
 
+                <a href="#about" class="menu-link">
+                    About
+                </a>
 
+                <a href="#contact" class="menu-link">
+                    Contact
+                </a>
 
-    </main>
+            </nav>
+
+            <!-- CONTENT WINDOW -->
+            <div class="content-window">
+
+                <!-- HOME -->
+                <section id="home" class="page">
+                    <h2>Welcome</h2>
+
+                    <p>
+                        Software engineer focused on backend
+                        development, automation, and building
+                        reliable software systems.
+                    </p>
+
+                    <a href="#projects" class="action-link">
+                        View Projects
+                    </a>
+                </section>
+
+                <!-- PROJECTS -->
+                <section id="projects" class="page" hidden>
+                    <h2>Projects</h2>
+
+                    <article class="project">
+                        <h3>Asteroids</h3>
+
+                        <p>
+                            A classic arcade game built using
+                            Python and Pygame.
+                        </p>
+                    </article>
+
+                    <article class="project">
+                        <h3>AI Coding Agent</h3>
+
+                        <p>
+                            A Python coding agent that can
+                            inspect, create, and run files.
+                        </p>
+                    </article>
+
+                    <article class="project">
+                        <h3>Azeroth Bots</h3>
+
+                        <p>
+                            An experimental bot automation
+                            and telemetry project.
+                        </p>
+
+                        <small>In development</small>
+                    </article>
+                </section>
+
+                <!-- EXPERIENCE -->
+                <section id="experience" class="page" hidden>
+                    <h2>Experience</h2>
+
+                    <p>
+                        Professional experience developing
+                        automation, data integrations, and
+                        internal software applications.
+                    </p>
+                </section>
+
+                <!-- SKILLS -->
+                <section id="skills" class="page" hidden>
+                    <h2>Skills</h2>
+
+                    <h3>Programming Languages</h3>
+                    <p>Python, Go, C#, JavaScript, SQL</p>
+
+                    <h3>Development Tools</h3>
+                    <p>Git, Linux, Visual Studio, VS Code</p>
+                </section>
+
+                <!-- ABOUT -->
+                <section id="about" class="page" hidden>
+                    <h2>About Me</h2>
+
+                    <p>
+                        I have a background in computer
+                        science and enjoy developing software,
+                        automation tools, and game-related
+                        programming projects.
+                    </p>
+                </section>
+
+                <!-- CONTACT -->
+                <section id="contact" class="page" hidden>
+                    <h2>Contact</h2>
+
+                    <p>
+                        You can explore my public repositories
+                        on GitHub.
+                    </p>
+
+                    <a
+                        href="https://github.com/sebastianklemkosky"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="action-link"
+                    >
+                        Visit GitHub
+                    </a>
+                </section>
+
+            </div>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <p>&copy; 2026 Sebastian Klemkosky</p>
+        </footer>
+
+    </div>
+
 </body>
 </html>

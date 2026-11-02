@@ -1,79 +1,57 @@
 
-/* ========================================
-   Texas Hill Country Parallax
-======================================== */
+/* =========================
+   PORTFOLIO NAVIGATION
+========================= */
 
-const surface = document.querySelector(".surface");
+// Get all navigation links and content sections.
+const menuLinks = document.querySelectorAll(".menu-link");
+const pages = document.querySelectorAll(".page");
 
-const farHills = document.querySelector(".mountains-far");
-const nearHills = document.querySelector(".mountains-near");
+// Set the currently selected section.
+function showPage(pageId) {
 
-const reducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-);
+    // Use Home if the requested section doesn't exist.
+    const pageExists = document.getElementById(pageId)
+        ?.classList.contains("page");
 
-// Parallax speed multipliers
-const FAR_SPEED = 0.35;
-const NEAR_SPEED = 0.15;
-
-let ticking = false;
-
-function updateParallax() {
-    if (!surface || !farHills || !nearHills) {
-        ticking = false;
-        return;
+    if (!pageExists) {
+        pageId = "home";
     }
 
-    if (reducedMotion.matches) {
-        farHills.style.transform = "";
-        nearHills.style.transform = "";
-        ticking = false;
-        return;
-    }
+    // Show the selected page and hide the others.
+    pages.forEach((page) => {
+        page.hidden = page.id !== pageId;
+    });
 
-    const rect = surface.getBoundingClientRect();
+    // Highlight the selected navigation item.
+    menuLinks.forEach((link) => {
 
-    // Skip updates when the surface is off-screen
-    if (rect.bottom < 0 || rect.top > window.innerHeight) {
-        ticking = false;
-        return;
-    }
+        const isActive = link.hash === `#${pageId}`;
 
-    const scrollDistance = Math.max(0, -rect.top);
+        link.classList.toggle("active", isActive);
 
-    // Far hills move more slowly relative to the viewport
-    farHills.style.transform =
-        `translate3d(0, ${scrollDistance * FAR_SPEED}px, 0)`;
+        if (isActive) {
+            link.setAttribute("aria-current", "page");
+        } else {
+            link.removeAttribute("aria-current");
+        }
 
-    // Near hills move closer to the normal page speed
-    nearHills.style.transform =
-        `translate3d(0, ${scrollDistance * NEAR_SPEED}px, 0)`;
+    });
 
-    ticking = false;
+    // Reset the content window's scroll position.
+    document.querySelector(".content-window").scrollTop = 0;
 }
 
-function requestParallaxUpdate() {
-    if (!ticking) {
-        requestAnimationFrame(updateParallax);
-        ticking = true;
-    }
+// Read the selected section from the URL.
+function updatePageFromURL() {
+
+    const pageId = window.location.hash.substring(1) || "home";
+
+    showPage(pageId);
 }
 
-window.addEventListener(
-    "scroll",
-    requestParallaxUpdate,
-    { passive: true }
-);
+// Handle navigation and browser Back/Forward.
+window.addEventListener("hashchange", updatePageFromURL);
 
-window.addEventListener(
-    "resize",
-    requestParallaxUpdate
-);
-
-reducedMotion.addEventListener(
-    "change",
-    requestParallaxUpdate
-);
-
-// Set initial position
-requestParallaxUpdate();
+// Set the initial section when the website loads.
+updatePageFromURL();
