@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Software engineering portfolio featuring backend development, automation, and interactive projects.">
-  <meta name="theme-color" content="#0b1220">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Sebastian Klemkosky — software engineering, automation, backend systems, and interactive projects.">
   <title>Sebastian Klemkosky | Software Engineer</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
@@ -12,49 +12,107 @@
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
   <header class="site-header">
-    <nav class="container nav" aria-label="Main navigation">
-      <a class="wordmark" href="#home">SK<span>.</span></a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <a class="nav-github" href="https://github.com/sebastianklemkosky" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    <a class="logo" href="#top" aria-label="Back to top">SK<span class="logo-dot">.</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
     </nav>
+    <a class="nav-github" href="https://github.com/SebastianKlemkosky" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
   </header>
+
   <main id="main">
-    <section class="hero container" id="home">
-      <p class="eyebrow"><span class="status-dot"></span> Software engineer · Portfolio</p>
-      <h1>Building practical software,<br><span>one project at a time.</span></h1>
-      <p class="hero-description">I'm Sebastian, a software engineer interested in backend systems, automation, and games. Welcome to my space to share what I'm building and learning.</p>
-      <div class="hero-actions">
-        <a class="button primary" href="#projects">Explore projects <span aria-hidden="true">↘</span></a>
-        <a class="button secondary" href="https://github.com/sebastianklemkosky" target="_blank" rel="noopener noreferrer">View GitHub ↗</a>
-      </div>
-      <div class="hero-meta"><span>Python</span><span>Go</span><span>JavaScript</span><span>SQL</span></div>
-    </section>
-    <section class="section about-section" id="about">
-      <div class="container two-column">
-        <div><p class="eyebrow">01 / About</p><h2>Hi, I'm Sebastian.</h2></div>
-        <div class="section-copy"><p>I have a background in computer science and experience building software and automation tools. I enjoy solving problems, working with data, and turning ideas into functioning applications.</p><p>This portfolio will grow as I publish new projects, including interactive demos you can run right here in your browser.</p></div>
-      </div>
-    </section>
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-heading"><div><p class="eyebrow">02 / Selected work</p><h2>Featured projects</h2></div><p>Code, experiments, and things I've built.</p></div>
-        <div class="project-grid">
-          <article class="project-card"><div class="project-visual visual-asteroids" aria-hidden="true"><span>✦</span><span class="project-art-label">PYGAME / PYTHON</span></div><div class="project-content"><div class="project-top"><h3>Asteroids</h3><span class="project-tag">Completed</span></div><p>A classic arcade-style game built with Python and Pygame. Browser-playable version planned.</p><div class="tech-tags"><span>Python</span><span>Pygame</span></div><p class="project-links"><a href="https://github.com/sebastianklemkosky?tab=repositories" target="_blank" rel="noopener noreferrer">Browse repositories ↗</a></p></div></article>
-          <article class="project-card"><div class="project-visual visual-dungeon" aria-hidden="true"><span>▦</span><span class="project-art-label">BROWSER GAME / CONCEPT</span></div><div class="project-content"><div class="project-top"><h3>Dungeon Explorer</h3><span class="project-tag upcoming">Planned</span></div><p>A turn-based dungeon crawler with procedural rooms, grid movement, and enemy encounters.</p><div class="tech-tags"><span>JavaScript</span><span>HTML Canvas</span></div><p class="project-links">Playable demo coming later</p></div></article>
-          <article class="project-card"><div class="project-visual visual-bots" aria-hidden="true"><span>⌘</span><span class="project-art-label">TELEMETRY / BACKEND</span></div><div class="project-content"><div class="project-top"><h3>Azeroth Bots</h3><span class="project-tag upcoming">In development</span></div><p>A game-bot telemetry project exploring backend systems, data collection, and analytics.</p><div class="tech-tags"><span>Go</span><span>SQL</span><span>Analytics</span></div><p class="project-links">Case study coming later</p></div></article>
+    <!-- LEVEL 1: HERO. Intentionally kept as a placeholder for the future runner. -->
+    <section class="biome surface" id="top" aria-labelledby="surface-heading">
+      <div class="sky-cloud cloud-one" aria-hidden="true"></div>
+      <div class="sky-cloud cloud-two" aria-hidden="true"></div>
+      <div class="surface-hills" aria-hidden="true"></div>
+      <div class="content hero-content">
+        <div class="level-tag">LEVEL 01 <span>·</span> SURFACE</div>
+        <h1 id="surface-heading">The adventure<br><em>starts here.</em></h1>
+        <p>This space is reserved for an interactive pixel-art endless runner. The game will arrive after the rest of the portfolio is complete.</p>
+        <div class="hero-actions">
+          <a class="pixel-button" href="#about">Explore the world <span aria-hidden="true">↓</span></a>
+          <span class="coming-soon"><span class="small-led"></span> Runner in development</span>
         </div>
       </div>
+      <div class="surface-ground" aria-hidden="true"><span class="grass"></span><span class="dirt"></span></div>
+      <div class="scroll-label" aria-hidden="true">SCROLL TO DESCEND ↓</div>
     </section>
-    <section class="section skills-section" id="skills">
-      <div class="container two-column"><div><p class="eyebrow">03 / Toolbox</p><h2>Technologies<br>I work with.</h2></div><div class="skills-list"><div><h3>Languages</h3><p>Python · Go · JavaScript · C# · SQL</p></div><div><h3>Development</h3><p>Git · GitHub · Linux · HTML · CSS</p></div><div><h3>Areas of interest</h3><p>Backend development · Automation · Data pipelines · Games</p></div></div></div>
+
+    <!-- LEVEL 2: SEWERS / ABOUT -->
+    <section class="biome sewer" id="about" aria-labelledby="about-heading">
+      <div class="pipes" aria-hidden="true"><span class="pipe pipe-a"></span><span class="pipe pipe-b"></span><span class="pipe pipe-c"></span></div>
+      <div class="sewer-bricks" aria-hidden="true"></div>
+      <div class="content section-content">
+        <div class="level-tag">LEVEL 02 <span>·</span> UNDERCITY</div>
+        <div class="split-layout">
+          <div>
+            <p class="eyebrow">01 / ABOUT ME</p>
+            <h2 id="about-heading">Curiosity goes<br><em>below the surface.</em></h2>
+            <p class="lead">I'm Sebastian, a software engineer with a computer science background and experience building practical automation and software systems.</p>
+            <p>I enjoy backend development, data pipelines, problem solving, and making small games. This site is both my portfolio and a project I can keep improving.</p>
+          </div>
+          <div class="pixel-panel character-panel">
+            <div class="panel-top"><span class="panel-lights">■ ■ ■</span><span>PLAYER PROFILE</span></div>
+            <div class="avatar-scene" aria-hidden="true">
+              <div class="avatar-pixel"><span class="head"></span><span class="eye"></span><span class="torso"></span><span class="arm"></span><span class="leg left"></span><span class="leg right"></span></div>
+              <span class="avatar-platform"></span>
+            </div>
+            <div class="profile-details"><strong>SEBASTIAN</strong><span>CLASS: SOFTWARE ENGINEER</span><span>SPECIALTIES: AUTOMATION / BACKEND</span><span>QUEST: BUILD &amp; LEARN</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="waterline" aria-hidden="true"></div>
     </section>
-    <section class="section contact-section" id="contact"><div class="container"><p class="eyebrow">04 / Contact</p><h2>Let's connect.</h2><p>Interested in my work? See what I'm building on GitHub.</p><div class="hero-actions"><a class="button primary" href="https://github.com/sebastianklemkosky" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a><a class="button secondary" href="#projects">See projects</a></div></div></section>
+
+    <!-- LEVEL 3: EARTH / PROJECTS -->
+    <section class="biome underground" id="projects" aria-labelledby="projects-heading">
+      <div class="ore ore-one" aria-hidden="true">✦</div><div class="ore ore-two" aria-hidden="true">✦</div><div class="ore ore-three" aria-hidden="true">✦</div>
+      <div class="content section-content">
+        <div class="level-tag">LEVEL 03 <span>·</span> THE DEEP</div>
+        <p class="eyebrow">02 / FEATURED WORK</p>
+        <h2 id="projects-heading">Dig into the <em>projects.</em></h2>
+        <p class="section-intro">A few things I've built, and a few still taking shape. Completed work and upcoming experiments are labeled separately.</p>
+        <div class="project-grid">
+          <article class="pixel-panel project-card">
+            <div class="project-art asteroid-art" aria-hidden="true"><span class="pixel-ship">▲</span><span class="asteroid ast-one">◆</span><span class="asteroid ast-two">◆</span><span class="star star-one">✦</span><span class="star star-two">·</span></div>
+            <div class="card-body"><div class="card-heading"><h3>Asteroids</h3><span class="status complete">Completed</span></div><p>A classic arcade game built with Python and Pygame. A browser-playable version is planned.</p><div class="chips"><span>Python</span><span>Pygame</span></div><a class="text-link" href="https://github.com/SebastianKlemkosky?tab=repositories" target="_blank" rel="noopener noreferrer">Browse repositories ↗</a></div>
+          </article>
+          <article class="pixel-panel project-card">
+            <div class="project-art dungeon-art" aria-hidden="true"><span class="dungeon-door"></span><span class="dungeon-flame flame-left"></span><span class="dungeon-flame flame-right"></span></div>
+            <div class="card-body"><div class="card-heading"><h3>Dungeon Explorer</h3><span class="status planned">Planned</span></div><p>A turn-based browser dungeon crawler with procedural rooms, tile movement, and enemy encounters.</p><div class="chips"><span>JavaScript</span><span>HTML Canvas</span></div><span class="text-muted">Playable demo coming later</span></div>
+          </article>
+          <article class="pixel-panel project-card">
+            <div class="project-art bot-art" aria-hidden="true"><span class="bot-head"><span class="bot-eye left"></span><span class="bot-eye right"></span></span><span class="bot-body"></span><span class="bot-antenna"></span><span class="bot-signal">⌁</span></div>
+            <div class="card-body"><div class="card-heading"><h3>Azeroth Bots</h3><span class="status progress">In development</span></div><p>An evolving project exploring game-bot telemetry, backend systems, data collection, and analytics.</p><div class="chips"><span>Go</span><span>SQL</span><span>Analytics</span></div><span class="text-muted">Case study coming later</span></div>
+          </article>
+        </div>
+      </div>
+      <div class="rock-transition" aria-hidden="true"></div>
+    </section>
+
+    <!-- LEVEL 4: LAVA / SKILLS & CONTACT -->
+    <section class="biome inferno" id="skills" aria-labelledby="skills-heading">
+      <div class="ember ember-one" aria-hidden="true"></div><div class="ember ember-two" aria-hidden="true"></div><div class="ember ember-three" aria-hidden="true"></div>
+      <div class="content section-content">
+        <div class="level-tag">LEVEL 04 <span>·</span> THE CORE</div>
+        <p class="eyebrow">03 / TOOLBOX</p>
+        <h2 id="skills-heading">Forged in <em>code.</em></h2>
+        <p class="section-intro">Languages and technologies I use or am actively developing.</p>
+        <div class="skills-grid">
+          <div class="pixel-panel skill-box"><div class="skill-icon">{ }</div><h3>Languages</h3><p>Python · Go · JavaScript · C# · SQL</p></div>
+          <div class="pixel-panel skill-box"><div class="skill-icon">&lt;/&gt;</div><h3>Development</h3><p>Git · GitHub · Linux · HTML · CSS</p></div>
+          <div class="pixel-panel skill-box"><div class="skill-icon">⚙</div><h3>Interests</h3><p>Backend systems · Automation · Data pipelines · Games</p></div>
+        </div>
+        <div class="contact-section" id="contact">
+          <p class="eyebrow">04 / CONTACT</p>
+          <h2>Made it to the <em>bottom?</em></h2>
+          <p>Thanks for exploring. See what I'm working on or get in touch through GitHub.</p>
+          <div class="contact-actions"><a class="pixel-button" href="https://github.com/SebastianKlemkosky" target="_blank" rel="noopener noreferrer">Visit GitHub ↗</a><a class="pixel-button outline" href="#top">Back to surface ↑</a></div>
+        </div>
+      </div>
+      <div class="lava-river" aria-hidden="true"><div class="lava-wave"></div></div>
+    </section>
   </main>
-  <footer class="site-footer"><div class="container footer-row"><span>© <span id="year">2026</span> Sebastian Klemkosky</span><span>Built with HTML, CSS & JavaScript · Hosted on GitHub Pages</span></div></footer>
+  <footer class="site-footer"><span>© <span id="year">2026</span> Sebastian Klemkosky</span><span>Hand-built with HTML, CSS &amp; JavaScript · GitHub Pages</span></footer>
 </body>
 </html>
